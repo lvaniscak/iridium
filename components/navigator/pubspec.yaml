@@ -25,15 +25,25 @@ dependencies:
   universal_io: ^2.0.4
 
   mno_commons:
-    path: ../commons
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: commons
   mno_server:
-    path: ../server
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: server
   mno_shared:
-    path: ../shared
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: shared
   mno_streamer:
-    path: ../streamer
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: streamer
   mno_webview:
-    path: ../webview
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: webview
 
 dev_dependencies:
   test: ^1.22.2

@@ -30,9 +30,13 @@ dependencies:
   url_launcher: ^6.1.8
   uuid: ^3.0.7
   mno_commons:
-    path: ../commons
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: commons
   mno_shared:
-    path: ../shared
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: shared
 
 dev_dependencies:
   test: ^1.22.2

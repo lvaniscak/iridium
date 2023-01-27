@@ -22,7 +22,9 @@ dependencies:
   universal_io: ^2.0.4
   xml: ^6.2.2
   mno_commons:
-    path: ../commons
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: commons
   path: ^1.8.3
 
 dev_dependencies:
