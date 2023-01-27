@@ -15,12 +15,16 @@ import 'package:mno_streamer/parser.dart';
 
 abstract class BookScreen extends StatefulWidget {
   final FileAsset asset;
+  final String? bookName;
+  final Widget? leading;
   final ReaderAnnotationRepository? readerAnnotationRepository;
 
   const BookScreen({
     super.key,
     required this.asset,
     this.readerAnnotationRepository,
+    this.bookName,
+    this.leading
   });
 }
 
@@ -135,6 +139,8 @@ abstract class BookScreenState<T extends BookScreen,
               child: ReaderAppBar(
                 readerContext: readerContext,
                 publicationController: publicationController,
+                bookName: widget.bookName,
+                leading: widget.leading,
               ),
             ),
           ),

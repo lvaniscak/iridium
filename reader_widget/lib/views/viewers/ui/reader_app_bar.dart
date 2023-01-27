@@ -15,11 +15,18 @@ import 'package:mno_navigator/publication.dart';
 class ReaderAppBar extends StatefulWidget {
   final ReaderContext readerContext;
   final PublicationController publicationController;
-
+  final Widget? leading;
+  final Widget? menu;
+  final Widget? fontMenu;
+  final String? bookName;
   const ReaderAppBar({
     super.key,
     required this.readerContext,
     required this.publicationController,
+    this.menu,
+    this.fontMenu,
+    this.bookName,
+    this.leading
   });
 
   @override
@@ -60,23 +67,37 @@ class ReaderAppBarState extends State<ReaderAppBar> {
             child: SizedBox(
               height: height,
               child: AppBar(
-                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                iconTheme: IconThemeData(
-                  color: Theme.of(context).colorScheme.onPrimaryContainer,
-                ),
+               
+        toolbarHeight: 40,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        centerTitle: true,
+        titleSpacing: 0,
+        leadingWidth: 30,
+        leading: widget.leading,
+    // Show actual chapter name
+    title:  Text(
+        widget.bookName ?? 'Skuska',
+         style: TextStyle(
+         fontFamily: 'TabacSans',
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+      ),
+      ),
                 actions: [
-                  IconButton(
-                    onPressed: _onBookmarkPressed,
-                    icon: const ImageIcon(
-                      AssetImage(
-                        'packages/iridium_reader_widget/assets/images/icon_bookmark.png',
-                      ),
-                    ),
-                  ),
+                  // IconButton(
+                  //   onPressed: _onBookmarkPressed,
+                  //   icon: const ImageIcon(
+                  //     AssetImage(
+                  //       'packages/iridium_reader_widget/assets/images/icon_bookmark.png',
+                  //     ),
+                  //   ),
+                  // ),
                   IconButton(
                     key: _settingsKey,
                     onPressed: _onSettingsPressed,
-                    icon: const ImageIcon(
+                    icon:  ImageIcon(
                       AssetImage(
                         'packages/iridium_reader_widget/assets/images/icon_settings.png',
                       ),

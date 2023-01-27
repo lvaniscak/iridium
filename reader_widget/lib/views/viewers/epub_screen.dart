@@ -26,7 +26,9 @@ class EpubScreen extends BookScreen {
       super.readerAnnotationRepository,
       this.location,
       this.settings,
-      this.theme});
+      this.theme,
+      super.bookName,
+      super.leading});
 
   factory EpubScreen.fromPath(
       {Key? key,
