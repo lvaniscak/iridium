@@ -23,21 +23,37 @@ dependencies:
   flutter:
     sdk: flutter
   iridium_reader_widget:
-    path: ../reader_widget
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: reader_widget
   mno_commons:
-    path: ../components/commons
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/commons
   mno_navigator:
-    path: ../components/navigator
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/navigator
   mno_opds:
-    path: ../components/opds
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/opds
   mno_shared:
-    path: ../components/shared
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/shared
   mno_webview:
-    path: ../components/webview
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/webview
   mno_lcp:
-    path: ../components/lcp
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/lcp
   mno_streamer:
-    path: ../components/streamer
+    git:
+      url: https://github.com/lvaniscak/iridium.git
+      path: components/streamer
 
   cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.5
